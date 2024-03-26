@@ -77,3 +77,39 @@ bool check(int opc){
     return false;
 }
 */
+/*
+#include <iostream>
+void menuOpciones();
+int main(){
+    menuOpciones();
+}
+void menuOpciones(){
+    std::string preguntas[] = {"En que anho se creo c++?", "Quien invento c++?", "Cual es el predecesor de c++", "La tierra es plana"};
+    std::string respuestas[][4] = {{"A. 1969", "B. 1975", "C. 1985", "D. 1989"},
+    {"A. Guido van Rossum, ", "B. Bjarne Stroustrup", "John Carmack", "D. Mark Zuckerburg"},
+    {"A. c", "B. c+", "C. c--", "D. B++"},
+    {"A. S`i", "B. No", "C. tal vez", "D. xd"}};
+    char opc;
+    char correctas[] = {'C', 'B', 'A', 'B'};
+    int score = 0;
+    const int SIZE = sizeof(preguntas) / sizeof(preguntas[0]);
+    std::cout << "********** JUEGO DE PREGUNTAS ***********\n";
+    for(int i = 0; i < SIZE; i++){
+        std::cout << "\n***************************\n";
+        std::cout << i + 1 << ". " << preguntas[i] << '\n';
+        std::cout << "***************************\n";
+        for(int j = 0; j < sizeof(respuestas[0]) / sizeof(respuestas[0][0]); j++){
+            std::cout << respuestas[i][j] <<", \n";
+        }
+        std::cin >> opc;
+        opc = toupper(opc);
+        if(opc == correctas[i]) score++;
+    }
+    std::cout << "*****************************\n";
+    std::cout << "********** SCORE ************\n";
+    std::cout << "*****************************\n";
+    std::cout << "Buenas: " << score << '\n';
+    std::cout << "Malas: " << 5 - score << '\n';
+    std::cout << "Score: " << score/(double)SIZE * 100 << '%';
+}
+*/
