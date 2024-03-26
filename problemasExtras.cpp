@@ -113,3 +113,27 @@ void menuOpciones(){
     std::cout << "Score: " << score/(double)SIZE * 100 << '%';
 }
 */
+/*
+#include <iostream>
+int dividirNumero(int num);
+int imparesDerecha(std::string num);
+int paresDerecha(std::string num);
+int main(){
+    std::cout << "Ingrese el numero a verificar: "; std::string num; std::cin >> num;
+    int res = paresDerecha(num) + imparesDerecha(num);
+    std::cout << (res % 10 == 0 ? "Valido :)" : "Invalido :c");
+}
+int dividirNumero(int num){
+    return num / 10 % 10 + num % 10;
+}
+int imparesDerecha(std::string num){
+    int suma = 0;
+    for(int i = num.size() - 1; i >= 0; i -= 2) suma += num[i] - '0';
+    return suma;
+}
+int paresDerecha(std::string num){
+    int suma = 0;
+    for(int i = num.size() - 2; i >= 0; i -= 2) suma += dividirNumero((num[i] - '0') * 2);
+    return suma;
+}
+*/
