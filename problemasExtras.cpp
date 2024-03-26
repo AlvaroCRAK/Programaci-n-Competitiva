@@ -41,3 +41,39 @@ double calcularMenor(double a, double b, double c, double d){
     return menor;
 }
 */
+/*
+#include <iostream>
+void menuOpciones();
+bool check(int opc);
+int main(){
+    menuOpciones();
+}
+void menuOpciones(){
+    int piedra = 0, persona = 0;
+    bool win;
+    std::cout << "++++++++++ Piedra, papel o tijeras ++++++++++\n";
+    std::cout << "Ingrese el numero de intentos a jugar: "; int entos; std::cin >> entos;
+    for(int i = 0; i < entos; i++){
+        std::cout << "Ingrese una opcion: \nPiedra: [1]\nPapel: [2]\nTijera: [3]\n";
+        int opc; std::cin >> opc;
+        win = check(opc);
+        win ? persona ++ : piedra ++;
+    }
+    std::cout << "RESULTADOS\ncomputador: " << piedra << "\nPersona: " << persona;
+    std::cout << std::endl;
+    if(persona == piedra) std::cout << "Empate, f";
+    else if( persona > piedra) std::cout << "Ganaste, bien!";
+    else std::cout << "f, bro :c";
+    
+}
+bool check(int opc){
+    srand(time(NULL));
+    int random = rand() % 3;
+    if(random == opc){
+        std::cout << "Felicidades!\n";
+        return true;
+    } 
+    else std::cout << "f :c\n";
+    return false;
+}
+*/
