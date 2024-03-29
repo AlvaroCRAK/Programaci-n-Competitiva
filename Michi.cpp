@@ -1,4 +1,4 @@
-\\Michi por zublime
+\\zublime
 #include <iostream>
 #include <ctime>
 #include <iomanip>
