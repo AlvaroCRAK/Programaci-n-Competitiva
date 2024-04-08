@@ -101,7 +101,7 @@ void llenarDatos(char *unidadTrabajo, bool *genero, std::string *categoriaTrabaj
 void logica(char *unidadTrabajo, bool *genero, std::string *categoriaTrabajador, double *sueldo, double *descuento, double *bonificacionSimple, double *bonificacionEspecial){
     if(*categoriaTrabajador == "Funcionario"){
         switch(*unidadTrabajo){
-            case 'c': *descuento = 0;
+            case 'C': *descuento = 0;
             default: *descuento = (*sueldo) * 0.10;
         }
     }else if(*categoriaTrabajador == "Empleado"){
