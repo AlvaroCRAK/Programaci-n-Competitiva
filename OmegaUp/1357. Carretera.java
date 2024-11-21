@@ -41,8 +41,8 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             String[] carData = br.readLine().split(" ");
-            cars[0][i] = Integer.parseInt(carData[0]);  // x position
-            cars[1][i] = Integer.parseInt(carData[1]);  // velocity
+            cars[0][i] = Integer.parseInt(carData[0]);
+            cars[1][i] = Integer.parseInt(carData[1]); 
         }
 
         System.out.printf("%.6f", func(cars));
